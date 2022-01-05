@@ -33,7 +33,7 @@ html {
     right: 0;
     width: 10px;
     height: 0vh;
-    background: linear-gradient(to top, var(--blue), var(--white));
+    background: linear-gradient(to top, var(--blue), var(--bk1));
     animation: animate 5s linear infinite;
 }
 
