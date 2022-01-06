@@ -10,19 +10,12 @@
     <link rel="stylesheet" href="public/css/slider.css">
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <title>Vensan Drot</title>
-    <!-- <script type="module">
-    let el = document.getElementById("navh");
-      el.style.visibility ="hidden";
-      let e = document.getElementById("particles-js");
-      e.style.visibility = "hidden";
-      
-  </script>
-   -->
+
 </head>
 
 <body>
 
-
+    <!--
     <div class="intro" style="z-index:100;">
         <div class="intro-text">
             <h1 class="hide">
@@ -39,16 +32,8 @@
     <div class="sliderst" style="z-index:100;"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="public/js/app.js"></script>
-    <!-- -->
+     -->
 
-    <!--  <script type="module">
-      setTimeout(function(){let el1 = document.getElementById("navh");
-        let e1 = document.getElementById("particles-js");
-     el1.style.transition = "0.5s";
-     e1.style.visibility = "visible";
-     el1.style.visibility ="visible";},3300)
-     </script>
-  -->
 
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
@@ -57,19 +42,30 @@
 
     <nav class="navbar" id="navh">
         <ul>
-            <li><a href="#home" class="nava"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#home" class="nava "><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#projects" class="nava"><i class="fas fa-project-diagram"></i> Projects</a></li>
             <li><a href="#about" class="nava"><i class="fas fa-info"></i> About</a></li>
             <li><a href="#contact" class="nava"><i class="fas fa-id-card"></i> Contact</a></li>
-
+            <button id="toggle_bk" class="bk_tog"><i class="fas fa-sun" id="icon"></i></button>
         </ul>
     </nav>
+    <script src="public/js/swipe.js"></script>
+    <script>
+        const list = document.querySelectorAll('.nava');
 
+        function activeLink() {
+            list.forEach((item) =>
+                item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+            item.addEventListener('click', activeLink));
+    </script>
 
     <section id="home">
 
         <div class="block1">
-            <div style="height: 80%;margin-top: 10%;">
+            <div class="block1_text">
                 <h1>Welcome</h1>
                 <h1>To my</h1>
                 <h1>CV-Website.</h1>

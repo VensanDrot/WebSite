@@ -15,6 +15,8 @@ nextBtn.addEventListener("click", () => {
         slideIcon.classList.remove("active");
     });
 
+
+
     slideNumber++;
 
     if (slideNumber > (numberOfSlides - 1)) {
@@ -23,6 +25,7 @@ nextBtn.addEventListener("click", () => {
 
     slides[slideNumber].classList.add("active");
     slideIcons[slideNumber].classList.add("active");
+
 });
 
 //image slider previous button
