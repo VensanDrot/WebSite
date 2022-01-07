@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c125b8dcc5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="public/css/media.css">
     <link rel="stylesheet" href="public/css/slider.css">
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <title>Vensan Drot</title>
@@ -41,34 +42,37 @@
 
 
     <nav class="navbar" id="navh">
-        <ul>
-            <li><a href="#home" class="nava "><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#projects" class="nava"><i class="fas fa-project-diagram"></i> Projects</a></li>
-            <li><a href="#about" class="nava"><i class="fas fa-info"></i> About</a></li>
-            <li><a href="#contact" class="nava"><i class="fas fa-id-card"></i> Contact</a></li>
+
+        <ul id="nav-ul" class="nav-ul">
+            <li><a href="#home" class="nava home "><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#projects" class="nava projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#about" class="nava about"><i class="fas fa-info"></i> About</a></li>
+            <li><a href="#contact" class="nava contact"><i class="fas fa-id-card"></i> Contact</a></li>
             <button id="toggle_bk" class="bk_tog"><i class="fas fa-sun" id="icon"></i></button>
         </ul>
+        <!--    <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>-->
     </nav>
-    <script src="public/js/swipe.js"></script>
-    <script>
-        const list = document.querySelectorAll('.nava');
 
-        function activeLink() {
-            list.forEach((item) =>
-                item.classList.remove('active'));
-            this.classList.add('active');
-        }
-        list.forEach((item) =>
-            item.addEventListener('click', activeLink));
-    </script>
+
 
     <section id="home">
 
         <div class="block1">
-            <div class="block1_text">
-                <h1>Welcome</h1>
-                <h1>To my</h1>
-                <h1>CV-Website.</h1>
+            <div class="block1_cont">
+                <div class="block1_text_cont">
+                    <div class="block1_container">
+                        <div style="border-left: 4px solid var(--white); padding-left:10px">
+                            <p class="hello">Hello my name is</p>
+                            <h1>Vensan Drot</h1>
+                            <p class="job">Computer Science Student</p>
+                        </div>
+                        <div class="block1_links" style="padding-left: 10px;">
+                            <a href="https://t.me/Vens1k" class="block_link_a tg"><i class="fab fa-telegram-plane "></i></a>
+                            <a href="https://www.instagram.com/vens_12.06/" class="block_link_a inst"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/VensanDrot" class="block_link_a git"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -206,9 +210,8 @@
     </section>
 
     <script src="public/js/scroll.js"></script>
-
-
-
+    <script src="public/js/active.js"></script>
+    <script src="public/js/swipe.js"></script>
 
 
 </body>

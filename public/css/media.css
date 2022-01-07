@@ -1,0 +1,248 @@
+/*==========  Desktop First Method  ==========*/
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {
+    .block1 {
+        height: 40%;
+        z-index: 4;
+        backdrop-filter: blur(2px);
+        position: absolute;
+        width: 60%;
+        left: 33%;
+        display: inline-table;
+        align-items: center;
+    }
+    .block1 .block1_text_cont {
+        height: 100%;
+    }
+    .block1 .job {
+        font-size: 40px;
+    }
+    .block1 .block1_links {
+        width: 30%;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    .block1 {
+        height: 40%;
+        z-index: 4;
+        backdrop-filter: blur(2px);
+        position: absolute;
+        width: 60%;
+        left: 24%;
+        display: inline-table;
+        align-items: center;
+    }
+    .block1 .block1_text_cont {
+        height: 90%;
+    }
+    .block1 .job {
+        font-size: 30px;
+    }
+    .block1 .block1_links {
+        width: 40%;
+    }
+    .block1_container h1 {
+        font-size: 50px;
+    }
+    .block1 .hello {
+        font-size: 30px;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    .block1 {
+        height: 40%;
+        z-index: 4;
+        backdrop-filter: blur(2px);
+        position: absolute;
+        width: 60%;
+        left: 24%;
+        display: inline-table;
+        align-items: center;
+    }
+    .block1 .block1_text_cont {
+        height: 70%;
+    }
+    .block1 .job {
+        font-size: 23px;
+    }
+    .block1 .block1_links {
+        width: 40%;
+    }
+    .block1_container h1 {
+        font-size: 40px;
+    }
+    .block1 .hello {
+        font-size: 30px;
+    }
+    .block1_links i {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .block1 .block_link_a {
+        position: relative;
+        transition: 1s;
+        display: block;
+        width: 30px;
+        height: 30px;
+        color: var(--bk1);
+        text-align: center;
+        border-radius: 50%;
+        background-color: var(--white);
+        box-shadow: 0 2px 3px var(--white)
+    }
+}
+
+
+/* font awesome download */
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 500px) {
+    .block1 {
+        height: 40%;
+        z-index: 4;
+        backdrop-filter: blur(2px);
+        position: absolute;
+        width: 80%;
+        left: 12%;
+        display: inline-table;
+        align-items: center;
+    }
+    .block1 .block1_text_cont {
+        height: 70%;
+    }
+    .block1 .job {
+        font-size: 20px;
+    }
+    .block1 .block1_links {
+        width: 40%;
+    }
+    .block1_container h1 {
+        font-size: 35px;
+    }
+    .block1 .hello {
+        font-size: 25px;
+    }
+    .block1_links i {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .block1 .block_link_a {
+        position: relative;
+        transition: 1s;
+        display: block;
+        width: 30px;
+        height: 30px;
+        color: var(--bk1);
+        text-align: center;
+        border-radius: 50%;
+        background-color: var(--white);
+        box-shadow: 0 2px 3px var(--white)
+    }
+}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {
+    .block1 {
+        height: 40%;
+        z-index: 4;
+        backdrop-filter: blur(2px);
+        position: absolute;
+        width: 90%;
+        left: 7%;
+        display: inline-table;
+        align-items: center;
+    }
+    .block1 .block1_text_cont {
+        height: 50%;
+    }
+    .block1 .job {
+        font-size: 15px;
+    }
+    .block1 .block1_links {
+        width: 40%;
+    }
+    .block1_container h1 {
+        font-size: 25px;
+    }
+    .block1 .hello {
+        font-size: 15px;
+    }
+    .block1_links i {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .block1 .block_link_a {
+        position: relative;
+        transition: 1s;
+        display: block;
+        width: 30px;
+        height: 30px;
+        color: var(--bk1);
+        text-align: center;
+        border-radius: 50%;
+        background-color: var(--white);
+        box-shadow: 0 2px 3px var(--white)
+    }
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 320px) {}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {
+    .block1 {
+        height: 40%;
+        z-index: 4;
+        backdrop-filter: blur(2px);
+        position: absolute;
+        width: 60%;
+        left: 33%;
+        display: inline-table;
+        align-items: center;
+    }
+    .block1_links {
+        transition: 1s;
+        height: 30%;
+        width: 35%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

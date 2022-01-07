@@ -1,11 +1,6 @@
 let white = "#ffffff";
 let bk1 = "#111111";
-console.log(particlecolor);
-
-toggle_bk.onclick = function() {
-    console.log("working")
-    particlecolor = localStorage.getItem("color");
-}
+let blue = "#1e90ff";
 
 particlesJS('particles-js',
 
@@ -19,13 +14,13 @@ particlesJS('particles-js',
                 }
             },
             "color": {
-                "value": particlecolor
+                "value": [white, bk1]
             },
             "shape": {
                 "type": "circle",
                 "stroke": {
                     "width": 0,
-                    "color": "#000000"
+                    "color": "# 000000 "
                 },
                 "polygon": {
                     "nb_sides": 5
@@ -59,8 +54,8 @@ particlesJS('particles-js',
             "line_linked": {
                 "enable": true,
                 "distance": 150,
-                "color": particlecolor,
-                "opacity": 0.4,
+                "color": "#919191",
+                "opacity": 0.7,
                 "width": 1
             },
             "move": {
