@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c125b8dcc5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="public/css/main.css">
-    <link rel="stylesheet" type="text/css" href="public/css/media.css">
     <link rel="stylesheet" href="public/css/slider.css">
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/media.css">
     <title>Vensan Drot</title>
 
 </head>
@@ -44,15 +44,21 @@
     <nav class="navbar" id="navh">
 
         <ul id="nav-ul" class="nav-ul">
-            <li><a href="#home" class="nava home "><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#projects" class="nava projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-            <li><a href="#about" class="nava about"><i class="fas fa-info"></i> About</a></li>
-            <li><a href="#contact" class="nava contact"><i class="fas fa-id-card"></i> Contact</a></li>
-            <button id="toggle_bk" class="bk_tog"><i class="fas fa-sun" id="icon"></i></button>
+            <li class="nav-item"><a href="#home" class="nava home active "><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item"><a href="#projects" class="nava projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li class="nav-item"><a href="#about" class="nava about"><i class="fas fa-info"></i> About</a></li>
+            <li class="nav-item"><a href="#contact" class="nava contact"><i class="fas fa-id-card"></i> Contact</a></li>
+            <button id="toggle_bk" class="bk_tog nav-item"><i class="fas fa-sun" id="icon"></i></button>
         </ul>
-        <!--    <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>-->
+
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
 
+    <script src="public/js/hamburger.js"></script>
 
 
     <section id="home">
@@ -64,7 +70,7 @@
                         <div style="border-left: 4px solid var(--white); padding-left:10px">
                             <p class="hello">Hello my name is</p>
                             <h1>Vensan Drot</h1>
-                            <p class="job">Computer Science Student</p>
+                            <p class="job">Full stack developer</p>
                         </div>
                         <div class="block1_links" style="padding-left: 10px;">
                             <a href="https://t.me/Vens1k" class="block_link_a tg"><i class="fab fa-telegram-plane "></i></a>
