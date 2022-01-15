@@ -166,7 +166,7 @@ section#projects {
     border-radius: 35px;
     list-style: none;
     height: 100%;
-    width: 45%;
+    width: 52%;
     justify-content: center;
     align-items: center;
     justify-content: space-around;
@@ -174,6 +174,7 @@ section#projects {
 }
 
 .hamburger {
+    text-align: right;
     display: none;
     cursor: pointer;
 }
@@ -313,23 +314,6 @@ section#projects {
     box-shadow: 0 2px 3px var(--white)
 }
 
-.block_link_a:hover {
-    transition: 1s;
-    transform: translate(0, -10px);
-}
-
-.tg:hover {
-    color: #0088cc;
-}
-
-.inst:hover {
-    color: #c32aa3;
-}
-
-.git:hover {
-    color: var(--pink);
-}
-
 
 /** section home stop **/
 
@@ -364,73 +348,6 @@ section#projects {
     overflow: hidden;
 }
 
-.flex {
-    position: relative;
-    display: flex;
-    margin-left: 15%;
-    padding: 0;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
-    width: 70%;
-    height: 70%;
-}
-
-.project_block {
-    position: relative;
-    width: 30%;
-    height: 85%;
-    text-align: center;
-    border: 3px var(--white) solid;
-    border-radius: 15px;
-    display: block;
-    overflow: hidden;
-    transition: 0.5s ease-in-out;
-}
-
-.proj_block_text {
-    position: relative;
-    display: block;
-    height: 45%;
-    width: 90%;
-    margin-left: 5%;
-    overflow: hidden;
-}
-
-.proj_block_text a {
-    font-size: 25px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-}
-
-.proj_block_text p {
-    font-size: 15px;
-    overflow: hidden;
-    text-align: left;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
-}
-
-.project_block img {
-    width: 90%;
-    height: 50%;
-    overflow: hidden;
-    margin-top: 5%;
-    border: 1px transparent solid;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.project_block:hover {
-    z-index: 15;
-    transition: 0.5s all;
-    border-color: var(--blue);
-    transform: translateY(20px);
-}
-
 .proj_name_text h1 {
     font-size: 35px;
 }
@@ -438,6 +355,19 @@ section#projects {
 .proj_name_text span {
     display: block;
     font-size: 25px;
+}
+
+.flex {
+    position: relative;
+    display: flex;
+    margin-left: 15%;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: auto;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
 }
 
 

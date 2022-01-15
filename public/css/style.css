@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --bk1: rgb(17, 17, 17);
+    --bk2: rgba(17, 17, 17, 0.7);
+    --pink: #ff3c78;
+}
+
+.darkmode {
+    --blue: #1e90ff;
+    --bk2: rgba(255, 255, 255, 0.8);
+    --white: rgb(17, 17, 17);
+    --bk1: #ffffff;
+    --pink: #ff3c78;
+}
+
 main {
     font-family: "Lobster", cursive;
 }
@@ -25,7 +41,7 @@ main {
 }
 
 .intro {
-    background: black;
+    background: var(--bk1);
     position: fixed;
     top: 0;
     left: 0;
@@ -47,17 +63,42 @@ main {
 }
 
 .intro-text {
-    color: rgb(233, 233, 233);
+    color: var(--white);
     font-family: "Heebo", sans-serif;
     font-size: 3rem;
 }
 
 .hide {
-    background: black;
+    background: var(--bk1);
     overflow: hidden;
 }
 
 .hide span {
     transform: translateY(100%);
     display: inline-block;
+}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 992px) {}
+
+@media only screen and (max-width: 768px) {
+    .intro-text {
+        font-family: "Heebo", sans-serif;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .intro-text {
+        font-family: "Heebo", sans-serif;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .intro-text {
+        font-family: "Heebo", sans-serif;
+        font-size: 1rem;
+    }
 }
