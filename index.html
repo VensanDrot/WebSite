@@ -20,7 +20,7 @@
 
 <body>
 
-    <!--
+
     <div class="intro" style="z-index:100;">
         <div class="intro-text">
             <h1 class="hide">
@@ -38,7 +38,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="public/js/app.js"></script>
 
--->
+    <!---->
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
 
@@ -110,24 +110,18 @@
                 <div class="dslider">
 
                     <div class="dslider__item">
-                        <h1 class="count">Banking system</h1>
-                        <h1>C++ project</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam tenetur similique ullam fugit fuga quidem dolore explicabo hic. Odit, expedita.</p>
-                        <a href="#">Know More</a>
+                        <h1 class="count">This website</h1>
+                        <h1>HTML/CSS</h1>
+                        <p>Test work, with gained skills. I used HTML/CSS/JS/PHP/MYSQL in this project.</p>
+                        <a href="https://github.com/VensanDrot/WebSite">Know More</a>
                     </div>
 
                     <div class="dslider__item">
                         <h1 class="count">Banking system</h1>
                         <h1>C++ project</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam tenetur similique ullam fugit fuga quidem dolore explicabo hic. Odit, expedita.</p>
-                        <a href="#">Know More</a>
-                    </div>
-
-                    <div class="dslider__item">
-                        <h1 class="count">Banking system</h1>
-                        <h1>C++ project</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam tenetur similique ullam fugit fuga quidem dolore explicabo hic. Odit, expedita.</p>
-                        <a href="#">Know More</a>
+                        <p> Freshman project to manage banking system. C++ was used in the project. DB is replaced with a usual .txt
+                        </p>
+                        <a href="https://github.com/VensanDrot/Bank-Accounting">Know More</a>
                     </div>
 
 
@@ -174,8 +168,8 @@
             <a class="cv" href="public/vensandrot_en.pdf" target="_blank">
                 Curriculum Vitae(PDF)
             </a>
-            <a class="cv" href="vensandrot.pdf" target="_blank">
-                Curriculum Vitae RUS
+            <a class="cv" href="public/vensandrot_ru.pdf" target="_blank">
+                Curriculum Vitae(RUS)
             </a>
 
 
@@ -190,7 +184,7 @@
                 This year I will learn python, c# and game development using unity!
             </p>
 
-            <a href="https://github.com/VensanDrot" class="cv" id="Cs">GitHub</a>
+            <a href="https://github.com/VensanDrot" class="cv" id="Cs" target="_blank">GitHub</a>
 
 
         </div>
@@ -203,14 +197,14 @@
         <form class="Form_cont" action="contact.php" method="post" id="form">
 
             <h1 class="h1">Contact me</h1>
-
-            <!--   <?=(isset($error_name))?"<p class='error''>$error_name</p>":""; ?>-->
+            <h1 class="h1 error" style="color: green;" id="srh">Thank you for contacting me</h1>
+            <p class='error' id="name">enter proper name</p>
             <input type="text" class="input form_data" placeholder="Name" name="name" required>
 
-            <!--  <?=(isset($error_email))?"<p class='error''>$error_email</p>":""; ?>-->
+            <p class='error' id="email">enter proper email</p>
             <input type="text" class="input form_data" type="email" placeholder="Email" name="email" required>
 
-            <!--  <?=(isset($error_message))?"<p class='error''>$error_message</p>":""; ?>-->
+            <p class='error' id="text">enter proper message</p>
             <textarea class="input_text form_data" placeholder="Message" name="message" required cols="30" rows="10"></textarea>
 
             <button class="subbtn" name="submit" type="submit" id="submit"> SUBMIT </button>
@@ -218,6 +212,10 @@
 
         </form>
         <script>
+            var array;
+            let inputs = document.querySelectorAll('input');
+            let tar = document.querySelectorAll('textarea');
+
             $("#submit").click(function() {
 
                 $.post($("#form").attr("action"),
@@ -226,12 +224,51 @@
 
                         $("#response").empty();
                         $("#response").html(info);
-                        console.log("sendit");
-                    });
+                        array = JSON.parse(info);
 
+                        if (array[0] == false) {
+                            document.getElementById('name').classList.add("error_active");
+                            setTimeout(function() {
+                                document.getElementById('name').classList.remove("error_active");
+                            }, 25000);
+                        } else {
+                            document.getElementById('name').classList.remove("error_active");
+                        }
+
+                        if (array[1] == false) {
+                            document.getElementById('email').classList.add("error_active");
+                            setTimeout(function() {
+                                document.getElementById('email').classList.remove("error_active");
+                            }, 25000);
+                        } else {
+                            document.getElementById('email').classList.remove("error_active");
+                        }
+
+                        if (array[2] == false) {
+                            document.getElementById('text').classList.add("error_active");
+                            setTimeout(function() {
+                                document.getElementById('text').classList.remove("error_active");
+                            }, 25000);
+                        } else {
+                            document.getElementById('text').classList.remove("error_active");
+                        }
+
+                        if (array[3] == true) {
+                            inputs.forEach(input => input.value = '');
+                            tar.forEach(input => input.value = '');
+                            document.getElementById('srh').classList.add("error_active");
+                            setTimeout(function() {
+                                document.getElementById('srh').classList.remove("error_active");
+                            }, 20000);
+
+                        }
+
+
+                    });
                 $("#form").submit(function() {
                     return false;
                 });
+
             });
         </script>
 

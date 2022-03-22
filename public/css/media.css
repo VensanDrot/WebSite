@@ -511,6 +511,9 @@
         .input_text {
             min-height: 20vh;
         }
+        .Form_cont {
+            margin-top: 5vh;
+        }
     }
     /* Custom, iPhone Retina */
     
@@ -688,7 +691,7 @@
             margin-left: 5px;
         }
         .Form_cont {
-            margin-top: 10vh;
+            margin-top: 5vh;
         }
     }
     /*==========  Mobile First Method  ==========*/

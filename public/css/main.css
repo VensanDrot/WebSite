@@ -468,6 +468,15 @@ section#projects {
 }
 
 .error {
+    transition: 0.5s;
+    font-size: 15px;
+    color: red;
+    display: none;
+}
+
+.error_active {
+    display: block;
+    transition: 0.5s;
     font-size: 15px;
     color: red;
     text-transform: uppercase;
