@@ -13,12 +13,14 @@
     <link rel="stylesheet" type="text/css" href="public/css/media.css">
     <script src="https://kit.fontawesome.com/bd35cfa493.js" crossorigin="anonymous"></script>
     <link href="public/font/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Vensan Drot</title>
 
 </head>
 
 <body>
-    <!-- 
+
+    <!--
     <div class="intro" style="z-index:100;">
         <div class="intro-text">
             <h1 class="hide">
@@ -36,11 +38,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
     <script src="public/js/app.js"></script>
 
-  -->
-
+-->
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
-
 
 
     <nav class="navbar" id="navh">
@@ -197,15 +197,50 @@
 
     </section>
 
-
-
     <section id="contact">
 
 
+        <form class="Form_cont" action="contact.php" method="post" id="form">
+
+            <h1 class="h1">Contact me</h1>
+
+            <!--   <?=(isset($error_name))?"<p class='error''>$error_name</p>":""; ?>-->
+            <input type="text" class="input form_data" placeholder="Name" name="name" required>
+
+            <!--  <?=(isset($error_email))?"<p class='error''>$error_email</p>":""; ?>-->
+            <input type="text" class="input form_data" type="email" placeholder="Email" name="email" required>
+
+            <!--  <?=(isset($error_message))?"<p class='error''>$error_message</p>":""; ?>-->
+            <textarea class="input_text form_data" placeholder="Message" name="message" required cols="30" rows="10"></textarea>
+
+            <button class="subbtn" name="submit" type="submit" id="submit"> SUBMIT </button>
+
+
+        </form>
+        <script>
+            $("#submit").click(function() {
+
+                $.post($("#form").attr("action"),
+                    $("#form :input").serializeArray(),
+                    function(info) {
+
+                        $("#response").empty();
+                        $("#response").html(info);
+                        console.log("sendit");
+                    });
+
+                $("#form").submit(function() {
+                    return false;
+                });
+            });
+        </script>
 
 
     </section>
 
+
+    <script src="public/js/db.js"></script>
+    <script src="public/js/form.js"></script>
     <script src="public/js/scroll.js"></script>
     <script src="public/js/active.js"></script>
     <script src="public/js/swipe.js"></script>
@@ -213,44 +248,3 @@
 </body>
 
 </html>
-
-
-
-
-<!--
-                <div class="slider">
-                    <div class="slide active">
-                        <img src="public/img/1.jpg" alt="">
-
-                    </div>
-                    <div class="slide">
-                        <img src="public/img/2.jpg" alt="">
-
-                    </div>
-                    <div class="slide">
-                        <img src="public/img/3.jpg" alt="">
-
-                    </div>
-                    <div class="slide">
-                        <img src="public/img/4.jpg" alt="">
-
-                    </div>
-                    <div class="slide">
-                        <img src="public/img/5.jpg" alt="">
-                    </div>
-                    <div class="navigation">
-                        <i class="fas fa-chevron-left prev-btn"></i>
-                        <i class="fas fa-chevron-right next-btn"></i>
-                    </div>
-                    <div class="navigation-visibility">
-                        <div class="slide-icon active"></div>
-                        <div class="slide-icon"></div>
-                        <div class="slide-icon"></div>
-                        <div class="slide-icon"></div>
-                        <div class="slide-icon"></div>
-                    </div>
-                </div>
-
-                <script src="public/js/slider.js">
-                </script>
-                -->
